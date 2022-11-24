@@ -82,7 +82,11 @@ ExecStart=/usr/bin/geth \
   --mainnet \
   --metrics \
   --pprof \
-  --authrpc.jwtsecret=/secrets/jwtsecret
+  --authrpc.jwtsecret=/secrets/jwtsecret \
+  --rpc-http-enabled \
+  --rpc-http-port 8545 \
+  --engine-rpc-port 8551 \
+  --rpc-ws-enabled
 
 [Install]
 WantedBy=multi-user.target
